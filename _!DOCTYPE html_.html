@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta name="google-site-verification" content="NeiCUFAycrXABuhkdjXuI6614p4r2EFFpVJ9qogH96g" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colégio Estadual Polivalente de Goioerê</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Variáveis de Cores para o Estilo Luxuoso */
+        :root {
+            --cor-primaria: #111111;      /* Preto Sofisticado */
+            --cor-acento: #d4af37;        /* Dourado Luxo */
+            --cor-acento-hover: #aa8413;  /* Dourado Escuro */
+            --cor-fundo: #fcfcfd;         /* Branco Off-white */
+            --cor-texto: #2d2d2d;         /* Cinza Escuro Confortável */
+            --cor-card-fundo: #ffffff;    /* Branco Puro */
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.7;
+        }
+
+        /* Cabeçalho Luxuoso */
+        header {
+            background-color: var(--cor-primaria);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--cor-acento);
+        }
+
+        /* Estilização da Logo da Escola */
+        .logo {
+            max-width: 120px;
+            height: auto;
+            border-radius: 50%;
+            border: 2px solid var(--cor-acento);
+            padding: 5px;
+            background-color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        header h1 {
+            font-family: 'Cinzel', serif;
+            margin: 10px 0 5px 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            color: #ffffff;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--cor-acento);
+            font-weight: 300;
+        }
+
+        /* Menu de Navegação Premium */
+        nav {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: #e0e0e0;
+            padding: 18px 25px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--cor-primaria);
+            background-color: var(--cor-acento);
+        }
+
+        /* Container de Conteúdo */
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        /* Seções Estilo Card Minimalista */
+        .section {
+            background-color: var(--cor-card-fundo);
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .section h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--cor-primaria);
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        /* Linha decorativa embaixo dos títulos */
+        .section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--cor-acento);
+        }
+
+        /* Divisores sutis */
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.5), transparent);
+            margin: 40px 0;
+        }
+
+        /* Grid Moderno e Responsivo */
+        .flex-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        /* Cards Internos */
+        .col {
+            background: #fafafa;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            border-top: 4px solid var(--cor-primaria);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .col:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--cor-acento);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.05);
+        }
+
+        .col h3 {
+            font-family: 'Cinzel', serif;
+            margin-top: 0;
+            color: var(--cor-primaria);
+            font-size: 1.2rem;
+        }
+
+        /* Estilo para Contatos */
+        .contact-info p {
+            margin: 12px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Rodapé Elegante */
+        footer {
+            background-color: var(--cor-primaria);
+            color: #888888;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            border-top: 3px solid var(--cor-acento);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCYwJZ0O3-Rhev56-Cxjz7ilvT8p13ZUxiWpi0c2Gh4w&s" alt="Logo Escola Futuro Brilhante" class="logo">
+        <h1>Colégio Estadual Polivalente de Goioerê</h1>
+        <p>Formando cidadãos e construindo o amanhã</p>
+    </header>
+
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre Nós</a>
+        <a href="#cursos">Níveis de Ensino</a>
+        <a href="#profissionalizantes">Profissionalizantes</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="container">
+        
+        <section id="inicio" class="section">
+            <h2>Bem-vindos à nossa escola!</h2>
+            <p>Aqui, nós priorizamos o aprendizado prático, a criatividade e o desenvolvimento integral de cada aluno. Navegue pelo nosso site para conhecer mais sobre nossa estrutura e proposta pedagógica.</p>
+        </section>
+
+        <hr>
+
+        <section id="sobre" class="section">
+            <h2>Sobre Nós</h2>
+            <p>Fundada em 1977, o Colégio Estadual Polivalente de Goioerê nasceu com o objetivo de transformar a educação local. Contamos com professores qualificados, laboratórios modernos e uma ampla área de lazer e esportes.</p>
+        </section>
+
+        <hr>
+
+        <section id="cursos" class="section">
+            <h2>Níveis de Ensino</h2>
+            <div class="flex-grid">
+                <div class="col">
+                    <h3>Ensino Fundamental</h3>
+                    <p>Foco no desenvolvimento das habilidades básicas, raciocínio lógico e socialização pioneira.</p>
+                </div>
+                <div class="col">
+                    <h3>Ensino Médio</h3>
+                    <p>Preparação sólida para o vestibular, ENEM e para os desafios do mercado de trabalho global.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="profissionalizantes" class="section">
+            <h2>Cursos Profissionalizantes</h2>
+            <p>Prepare-se para o mercado de trabalho com os nossos cursos técnicos focados na prática e nas profissões mais requisitadas da atualidade.</p>
+            <div class="flex-grid">
+                <div class="col">
+                    <h3>Técnico em Inteligência Artificial e Dados</h3>
+                    <p>Aprenda a desenvolver algoritmos inteligentes, analisar grandes volumes de dados e criar soluções tecnológicas inovadoras. Um curso essencial para quem quer liderar a transformação digital.</p>
+                </div>
+                <div class="col">
+                    <h3>Técnico em Enfermagem</h3>
+                    <p>Formação humanizada voltada para o cuidado e assistência à saúde. O aluno aprende técnicas de enfermagem em laboratórios modernos e se prepara para atuar em hospitais, clínicas e postos de saúde.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="contato" class="section">
+            <h2>Contato e Localização</h2>
+            <div class="contact-info">
+                <p><strong>📍 Endereço:</strong> Rua Dr Rosalvo G de Mello Leitao, 600 
+Jd Curitiba
+87.360-000 - Goioere - Pr</p>
+                <p><strong>📞 Telefone:</strong>  (44) 3522-1458</p>
+                <p><strong>✉️ E-mail:</strong>  grepolivalente@seed.pr.gov.br</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Polivalente de Goioere, C E-Ef Eti Em P. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
